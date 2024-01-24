@@ -9,3 +9,11 @@ const simpleInterest= (p,t,r)=>{
 
 const total = simpleInterest(p,t,r)
 console.log(total)
+
+const compoundInterest = (p,r,t)=>{
+    const ci =p* Math.pow((1+r/100),t)
+    return ci
+}
+
+const totalCI = compoundInterest(p,t,r)
+console.log(totalCI)
