@@ -1,29 +1,37 @@
-let unit = 151
+let unit = 351
 
-if (unit <= 50 ){
-    const amount = unit * 0.5
-    const sur_charge = amount * 0.20;
-    console.log(sur_charge)
-    const total_amt  = amount + sur_charge;
-    console.log(total_amt)
-} else if(unit <= 150){
-const amount = 25 + ((unit - 100)* 0.75)
-    const sur_charge = amount * 0.20;
-    console.log(sur_charge)
-    const total_amt  = amount + sur_charge;
-    console.log(total_amt)
-}else if(unit <= 250){
-    const amount =100 + ((unit - 150) * 1.20)
-    const sur_charge = amount * 0.20;
-    console.log(sur_charge)
-    const total_amt  = amount + sur_charge;
-    console.log(total_amt)
-}else
-{
-    const amount = 220 + ((unit-250) * 1.50);
-    const sur_charge = amount * 0.20;
-    console.log(sur_charge)
-    const total_amt  = amount + sur_charge;
-    console.log(total_amt)
+let total_bill = 0
+let surcharge = 0
+
+let ru = unit
+if (ru > 0){
+    ru = ru - 50
+    total_bill  = total_bill + (50 * 0.5)
+    console.log(total_bill)
+}
+if(ru >0){
+    ru = ru - 100
+    total_bill  = total_bill + (100 * 0.75)
+    console.log(total_bill)
+
 }
 
+if(ru >0){
+    ru = ru - 100
+    console.log(ru)
+    total_bill  = total_bill + (100 * 1.20)
+    console.log(total_bill)
+
+}
+
+if(ru >0){
+    total_bill  = total_bill + (ru * 1.5)
+    console.log(total_bill)
+
+}
+
+surcharge = total_bill * 0.2
+
+total = surcharge + total_bill
+
+console.log("total", total)
